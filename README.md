@@ -1,16 +1,27 @@
 # Unparser
 
-Unparser is a plugin for Spigot 1.8.8 that converts previously parsed and structured map data from
-Mineplex's MapParser into its original, unstructured form for use on a Build Server. This allows for easier
-modification and editing of maps, including the likes spawn locations etc.
+Unparser is a Bukkit/Spigot 1.8.8 plugin. It takes map archive files made by Mineplex's MapParser and rebuilds them as normal, editable worlds for your Build Server.
 
-## Command Usage/Examples
+## What It Does
 
-Usage: `/unparse <gameType> <zip-archive>`
+- Takes one or more parsed map `.zip` files.
+- Rebuilds them into regular worlds you can open and edit.
 
-Example: `/unparse SurvivalGames SurvivalGames_Fallout.zip`
+## Commands
 
----
+- `/unparse run <gameType|auto> <source...>`: rebuilds maps from the source files.
+- `/unparse dryrun <gameType|auto> <source...>`: shows what would be rebuilt, without making changes.
+- `/unparse status`: shows whether a rebuild is currently running.
 
-> [!NOTE]  
-> This was created in 2022 so if any issues arise please keep in mind that there will be limited support.
+## Source Paths
+
+- A source can be a `.zip` file or a folder.
+- If you use a folder, Unparser checks that folder and all subfolders for `.zip` files.
+- You can include multiple sources in one command.
+- Put quotes around paths with spaces.
+
+Example:
+
+```text
+/unparse run auto "worlds/Survival Games" "worlds/Dragon Escape"
+```

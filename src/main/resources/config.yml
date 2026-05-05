@@ -1,0 +1,9 @@
+maps-folder: map
+source-safe-root: ""
+log-metrics: true
+show-player-failure-reasons: true
+unresolved-policy: skip
+type-detection:
+  aliases: {}
+messages:
+  world-locked: "&cThis world is currently being processed."

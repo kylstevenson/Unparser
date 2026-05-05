@@ -1,5 +1,5 @@
 name: Unparser
-main: com.kyles1872.unparser.Unparser
-author: KyleS1872
-version: 1
-softdepend: [ MapParser ]
+main: io.github.kylstevenson.unparser.UnparserPlugin
+author: Kyle
+version: ${project.version}
+description: ${project.description}
